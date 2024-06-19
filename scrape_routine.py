@@ -1,22 +1,9 @@
 import os
 from selenium import webdriver
 from dotenv import load_dotenv
+from echidna import Echidna
 
-
-class Echidna:
-    def __init__(self, driver):
-        self.driver = driver
     
-    def get_status(self):
-
-        raise NotImplementedError
-
-    def scrape(self):
-
-        raise NotImplementedError
-    
-
-
 class RoutineScraper(Echidna):
     def __init__(self, driver):
         super().__init__(driver)
@@ -32,12 +19,14 @@ class RoutineScraper(Echidna):
     def checkOut(self, element):
         pass
 
-    def helloworld():
+    def helloworld(self):
         print('hello world')
+
+
 
 
 if __name__ == '__main__':
     driver = webdriver.Chrome()
     load_dotenv()
     RS = RoutineScraper(driver)
-    # RS.helloworld()
+    RS.helloworld()
