@@ -1,9 +1,13 @@
 from selenium.webdriver.common.by import By
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
+
 import os
 class Echidna:
     def __init__(self, driver):
         self.driver = driver
-    
+        self.driver.implicitly_wait(10)
     def get_status(self):
 
         raise NotImplementedError
